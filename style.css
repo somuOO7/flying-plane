@@ -1,0 +1,76 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	height: 100vh;
+	width: 100%;
+}
+
+#cross {
+	display: none;
+	position: absolute;
+	top: 2%;
+	right: 2%;
+	z-index: 10;
+	color: white;
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+#map {
+	background: #6fdbe9;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 20rem;
+	height: 20rem;
+	border-radius: 50%;
+	box-shadow: inset 20px 20px 25px #3cafbe;
+	overflow: hidden;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+#map img {
+	position: absolute;
+	left: -215%;
+	height: 100%;
+	animation: map 15s linear infinite;
+}
+
+.plane {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 2rem;
+	transform: translate(-50%, -50%) rotate(-135deg);
+	animation: plane 4s infinite;
+}
+
+.plane img {
+	height: 100%;
+}
+
+@keyframes plane {
+	0%,
+	100% {
+		height: 2rem;
+	}
+
+	50% {
+		height: 3rem;
+	}
+}
+
+@keyframes map {
+	0% {
+		left: -225%;
+	}
+
+	100% {
+		left: 105%;
+	}
+}
